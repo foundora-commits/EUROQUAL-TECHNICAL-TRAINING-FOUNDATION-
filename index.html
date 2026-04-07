@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EUROQUAL TECHNICAL TRAINING FOUNDATION | Premium Education</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+darkMode: "class",
+theme: {
+extend: {
+"colors": {
+"secondary-fixed": "#ffe088",
+"on-background": "#181c1e",
+"surface-container-high": "#e5e9eb",
+"surface-container-lowest": "#ffffff",
+"surface-variant": "#e0e3e5",
+"on-error": "#ffffff",
+"surface-dim": "#d7dadc",
+"tertiary-container": "#003765",
+"error-container": "#ffdad6",
+"primary-fixed": "#d6e3ff",
+"on-primary-fixed-variant": "#2d476f",
+"surface": "#f7fafc",
+"secondary-fixed-dim": "#e9c349",
+"primary": "#002045",
+"on-error-container": "#93000a",
+"error": "#ba1a1a",
+"on-tertiary-container": "#68a2e9",
+"on-tertiary": "#ffffff",
+"surface-container-highest": "#e0e3e5",
+"primary-container": "#1a365d",
+"on-secondary-container": "#745c00",
+"on-tertiary-fixed": "#001c38",
+"on-primary": "#ffffff",
+"surface-tint": "#455f88",
+"on-surface": "#181c1e",
+"inverse-on-surface": "#eef1f3",
+"tertiary": "#002141",
+"secondary": "#735c00",
+"on-surface-variant": "#43474e",
+"tertiary-fixed": "#d3e4ff",
+"surface-container": "#ebeef0",
+"on-primary-container": "#86a0cd",
+"outline-variant": "#c4c6cf",
+"surface-container-low": "#f1f4f6",
+"on-secondary-fixed": "#241a00",
+"on-primary-fixed": "#001b3c",
+"on-secondary-fixed-variant": "#574500",
+"inverse-primary": "#adc7f7",
+"background": "#f7fafc",
+"primary-fixed-dim": "#adc7f7",
+"tertiary-fixed-dim": "#a2c9ff",
+"outline": "#74777f",
+"on-tertiary-fixed-variant": "#004881",
+"surface-bright": "#f7fafc",
+"secondary-container": "#fed65b",
+"on-secondary": "#ffffff",
+"inverse-surface": "#2d3133"
+        },
+"borderRadius": {
+"DEFAULT": "0.25rem",
+"lg": "0.5rem",
+"xl": "0.75rem",
+"full": "9999px"
+        },
+"fontFamily": {
+"headline": ["Noto Serif"],
+"body": ["Inter"],
+"label": ["Inter"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
+.glass-nav { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+.hero-gradient { background: linear-gradient(to right, rgba(0, 32, 69, 0.9), rgba(0, 32, 69, 0.4)); }
+/* Carousel styles */
+.carousel-slide {
+position: absolute;
+inset: 0;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+  }
+.carousel-slide.active {
+opacity: 1;
+  }
+/* Hero image: horizontal on desktop, vertical on mobile */
+.carousel-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center top;
+  }
+@media (max-width: 767px) {
+.carousel-slide img {
+object-position: center center;
+    }
+  }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none duration-300 ease-in-out">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-4 md:px-6 py-4">
+<div class="font-serif text-[20px] md:text-2xl font-bold tracking-tighter text-blue-900 dark:text-blue-100">
+      EUROQUAL TECHNICAL TRAINING FOUNDATION
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-900 dark:text-amber-400 font-semibold border-b-2 border-amber-500 pb-1 font-serif text-lg tracking-tight" href="#mission">Mission</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-colors font-serif text-lg tracking-tight" href="#education">Education</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-colors font-serif text-lg tracking-tight" href="#gallery">Gallery</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-800 transition-colors font-serif text-lg tracking-tight" href="#contact">Contact</a>
+</div>
+<button class="hidden md:block bg-primary hover:bg-primary-container text-on-primary px-6 md:px-6 py-2.5 rounded-lg transition-all text-[12px] md:text-sm font-medium tracking-wide" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Get Started
+</button>
+<button class="block md:hidden bg-primary hover:bg-primary-container text-on-primary px-6 md:px-6 py-4 rounded-lg transition-all text-[12px] md:text-sm font-medium tracking-wide" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Start
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[450px] md:h-[540px] pt-[40px] md:pt-[30px] overflow-hidden">
+<!-- Carousel -->
+<div class="absolute inset-0 z-0" id="hero-carousel">
+<!-- Slide 1 -->
+<div class="carousel-slide active">
+<img
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5GHmDD14tOdsQTMqpBTit8NThoQwAjED6bb6HCmm1OptFq_LqIHdA4F9ZI6dXzDJ0n_EmbZoqPTmZQoGqchI7oQK6Cq8UB99kdPK6QvIO480oiWKnojUT3eLAlGmhV9V7m-1PDVta2BnwslePvW7OYau97pYFN0mPZnftFbskhpM_AV2bvddDiXPfjw2oOAF_5V5DjUFImTc19_dh6n4gmOI93ru6QVh_I5SUnjrZT8dHH3p9hMmeWXrzTVOMSsLRYidj_bCT-Nw"
+alt="Modern high-end university classroom with natural light and minimalist architectural details"
+/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<!-- Slide 2 -->
+<div class="carousel-slide">
+<img
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjkY-v7VzzQTtQzPom-9YGYKhhaWqzqm0R4xz5eOA-vcC_QkRqrLjBwT7d5YpijLzSrbrY4MZC8QPWI9gxU9pwXvC4RtTk_jm0qBSAOkD1cLi3hiaFE6v4QzhHv8sRqZzUYOkadkZ2i98uSZC7dgzIYG70qM5kLlt0Eb7o4wgbHX7vb7U91scdhddYzHh0Y7PxatuSRBl8yBFyttAIIDSynrYUC27Vo0yJT1ZfK27LokLQwNg2mFaClxsdVD6Jrv2pW-PUKJGK-J8"
+alt="Diverse students engaged in collaborative discussion"
+/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<!-- Slide 3 -->
+<div class="carousel-slide">
+<img
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_XiURDSBeN2_1VerH-cDTOeKSg27Jxbz7Cov77D0kfcqIkGFUgtMxl-C33sLEcnZU9YmuZXpGzKLKCSLpxzyrrPZNeantIORAmUvs0-QI19VymxE1yargdAMdUScqCi06Qkc8kgdfuqxozgvYLhzhjg6WR6FRKWxr9EGBKg1kd2sJj01ohVMo_XUAUWkHTOPyyIdrVffGpmlKKMC1zP9-D5LMGfHjfbdkaTzGdQEgvTYBxcx4oJGppDzu1HuwS6kmM568fESuZE"
+alt="Modern educational facility lobby with minimalist seating"
+/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<!-- Slide 4 -->
+<div class="carousel-slide">
+<img
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl5oTS7-0KTpAMj0d2yKMCP-MPUuHp80sLFo1nTZ-CG_KFtYCTRE4gwET6qvtYYEB2T03FF_gF1xlQnHC7p03uGU_MtxfoUsttwXPkMYBdrhwXVWqjFJakRnnQRvW853mkRBmnvoVMI5NY9heyUSMLKWl4zTmFoqkpYUTYBX43KNcuNK-Upe5D0SEGCoJtCXFJgAD3bLHLrmolI46TJooHxWPvxOiQdjdhQ38iNtNZvIuo6dsYujm1Dr2P5L0s2xjWYV0OVy1qGdA"
+alt="A teacher mentoring a student in a bright workspace"
+/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 w-full">
+<div class="max-w-3xl md:max-w-4xl space-y-8">
+<h1 class="block md:hidden font-headline text-4xl font-bold text-white leading-tight tracking-tight">
+  Elevate Your Future with us...
+  <!-- <span class="block mt-4 leading-[1.1] text-secondary-container"> BILA</span>
+  <span class="block mt-4 leading-[1.1] text-secondary-container">FOUNDATION</span> -->
+</h1>
+<h1 class="hidden md:block font-headline md:text-7xl font-bold text-white tracking-tight">
+  <span class="block leading-[1.1]">Elevate Your Future<br>with us...</span>
+  <!-- <span class="block mt-4 leading-[1.1] text-secondary-container"> EUROQUAL TECHNICAL TRAINING FOUNDATION</span> -->
+</h1>
+
+<p class="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-2xl">
+          A transformational educational journey designed to turn today's aspirants into tomorrow's leaders.
+</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-secondary-container text-on-secondary-container px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-[13px] md:text-lg hover:scale-105 transition-transform" href="#contact">
+            Enroll Now
+</a>
+<a class="flex items-center gap-2 border border-white/30 bg-white/10 backdrop-blur-md text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-bold text-[13px] md:text-lg hover:bg-white/20 transition-all" href="https://wa.me/919172115823?text=Hi%20ARCRISE%20FOUNDATION" target="_blank" rel="noopener">
+            Chat on WhatsApp
+</a>
+</div>
+</div>
+</div>
+<!-- Carousel Dots -->
+<div class="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20" id="carousel-dots">
+<div class="w-12 h-1 bg-secondary-container rounded-full cursor-pointer carousel-dot active-dot" data-index="0"></div>
+<div class="w-12 h-1 bg-white/30 rounded-full cursor-pointer carousel-dot" data-index="1"></div>
+<div class="w-12 h-1 bg-white/30 rounded-full cursor-pointer carousel-dot" data-index="2"></div>
+<div class="w-12 h-1 bg-white/30 rounded-full cursor-pointer carousel-dot" data-index="3"></div>
+</div>
+</section>
+<!-- About / Mission Section -->
+<section class="py-16 md:py-24 bg-surface" id="mission">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+<img
+class="w-full h-full object-cover"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8-cnAYbY29S4dw97jZbgJ1doATUavvymxYd670niUnxvMCZ3B3GSexBaalnzToRYGhYj0gxjB_Bh3vnVC9FvY_v756lZj3Yd40zlLwIPQ8GB_41Qn_yzzzuhBAMQCV0fTCHdm9OXHEnayO7cfFetSY_d-0ZPsKXObwMlXsPiwovWaSx2RzB7iCQ-svsa0LVMjrvRyMQ2Ok-wRjqBbL3erpM2tsoABRE9x0gwE8VwfkkpXzPwsm2buA1CCP3VzWZOhFaOOUkd-sEU"
+alt="Confident student looking forward in a bright modern academic library environment"
+/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-secondary p-8 rounded-xl shadow-xl hidden lg:block">
+<p class="text-white font-headline text-2xl italic">"Where Potential Meets Purpose."</p>
+</div>
+</div>
+<div class="space-y-8">
+<label class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Our Mission</label>
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-primary leading-tight">
+            Your Potential, Realized.
+</h2>
+<div class="space-y-6 text-on-surface-variant text-base leading-relaxed">
+<p>
+              At EUROQUAL TECHNICAL TRAINING FOUNDATION, we believe that education is more than just academic achievement—it is the alchemy of transforming curiosity into capability.
+</p>
+<p>
+              We cultivate an environment of absolute trust, ensuring every student who walks through our doors is equipped with the mental fortitude and global perspective required for future impact.
+</p>
+</div>
+<div class="flex gap-12 pt-4">
+<div>
+<div class="text-2xl font-bold text-primary">100%</div>
+<div class="text-sm text-on-surface-variant">Commitment</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-primary">Global</div>
+<div class="text-sm text-on-surface-variant">Standards</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services / Education Section -->
+<section class="py-16 md:py-24 bg-surface-container-low" id="education">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-primary">Core Service</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg">A meticulous path from latent potential to global success.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-6 md:p-16 shadow-sm flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 space-y-6">
+<div class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-primary">Premium Educational Transformation</h3>
+<p class="text-on-surface-variant text-base leading-relaxed">
+            Our flagship program isn't just a curriculum; it's a recalibration of the student's journey. We provide a tailored roadmap that identifies unique strengths and bridges them to world-class opportunities.
+</p>
+</div>
+<div class="flex-1 w-full">
+<div class="grid gap-6">
+<div class="flex items-start gap-4 bg-surface p-6 rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-3xl">flare</span>
+<div>
+<h4 class="font-bold text-primary text-lg">Clarity of Future</h4>
+<p class="text-on-surface-variant">Defined roadmaps and career strategy aligned with global trends.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-surface p-6 rounded-2xl">
+<span class="material-symbols-outlined text-secondary text-3xl">public</span>
+<div>
+<h4 class="font-bold text-primary text-lg">Global Success</h4>
+<p class="text-on-surface-variant">Networking and expertise that transcends domestic boundaries.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-16 md:py-24 bg-surface" id="gallery">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<label class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Visual Journey</label>
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-primary">The ArcRise Experience</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+<div class="md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjkY-v7VzzQTtQzPom-9YGYKhhaWqzqm0R4xz5eOA-vcC_QkRqrLjBwT7d5YpijLzSrbrY4MZC8QPWI9gxU9pwXvC4RtTk_jm0qBSAOkD1cLi3hiaFE6v4QzhHv8sRqZzUYOkadkZ2i98uSZC7dgzIYG70qM5kLlt0Eb7o4wgbHX7vb7U91scdhddYzHh0Y7PxatuSRBl8yBFyttAIIDSynrYUC27Vo0yJT1ZfK27LokLQwNg2mFaClxsdVD6Jrv2pW-PUKJGK-J8"
+alt="Diverse students engaged in collaborative discussion around a modern table in a light-filled room"
+/>
+</div>
+<div class="md:col-span-2 rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_XiURDSBeN2_1VerH-cDTOeKSg27Jxbz7Cov77D0kfcqIkGFUgtMxl-C33sLEcnZU9YmuZXpGzKLKCSLpxzyrrPZNeantIORAmUvs0-QI19VymxE1yargdAMdUScqCi06Qkc8kgdfuqxozgvYLhzhjg6WR6FRKWxr9EGBKg1kd2sJj01ohVMo_XUAUWkHTOPyyIdrVffGpmlKKMC1zP9-D5LMGfHjfbdkaTzGdQEgvTYBxcx4oJGppDzu1HuwS6kmM568fESuZE"
+alt="Modern educational facility lobby with minimalist seating and aspirational architecture"
+/>
+</div>
+<div class="rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuckNOizm_54gTini4lhFjsDuq4auMv9WpjsmmVJwR9G91vRtDMK7-cyqp_oeaqez7VLgZ1sT9CeEAOvYC4luuT50MLBxlzjVdTg1Dofjf9QcLOJfxQEFguhvd5qYEt5p-JZ7JO0lRY06-GkANj8MFyI7GKVT9B-k8sfocUR9UT6VaioffEJaTvMmBLYxuU1Fi72gugfkwce3R5HhyTnnokCG5GnHRvAk_M71bjBkviXudp1OAw7idaWU-0hesY7tfC3w-F53Il8U"
+alt="Aspirational graduation moments with caps in the air against a blue sky background"
+/>
+</div>
+<div class="rounded-2xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl5oTS7-0KTpAMj0d2yKMCP-MPUuHp80sLFo1nTZ-CG_KFtYCTRE4gwET6qvtYYEB2T03FF_gF1xlQnHC7p03uGU_MtxfoUsttwXPkMYBdrhwXVWqjFJakRnnQRvW853mkRBmnvoVMI5NY9heyUSMLKWl4zTmFoqkpYUTYBX43KNcuNK-Upe5D0SEGCoJtCXFJgAD3bLHLrmolI46TJooHxWPvxOiQdjdhQ38iNtNZvIuo6dsYujm1Dr2P5L0s2xjWYV0OVy1qGdA"
+alt="A teacher mentoring a student in a bright workspace with books and digital tools"
+/>
+</div>
+</div>
+</div>
+</section>
+<!-- Address & Contact Section -->
+<section class="py-16 md:py-24 bg-surface-container-low overflow-hidden" id="contact">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-12 items-stretch">
+<!-- Address Card -->
+<div class="bg-primary p-8 rounded-3xl text-white space-y-10 relative overflow-hidden">
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline text-2xl md:text-5xl font-bold">Find Us here</h2>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container text-3xl">location_on</span>
+<p class="text-base md:text-lg leading-relaxed text-white/80">
+                No.158, Old No.781,Anna Salai<br/>
+                Anna Road,Chennai,<br/>
+                Tamil Nadu,India,600002
+</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container text-3xl">call</span>
+<p class="text-base md:text-xl">+91 9172115823</p>
+</div>
+<div class="pt-6">
+<a class="inline-flex items-center gap-3 bg-secondary-container text-on-secondary-container px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-[13px] md:text-base hover:shadow-lg transition-all"
+href="https://wa.me/919172115823?text=Hi%20ARCRISE%20FOUNDATION" target="_blank" rel="noopener">
+<span class="material-symbols-outlined">chat</span>
+                Chat on WhatsApp
+</a>
+</div>
+</div>
+<!-- Abstract Map Graphic -->
+<div class="absolute right-0 bottom-0 opacity-10 translate-x-1/4 translate-y-1/4">
+<span class="material-symbols-outlined text-[300px]">map</span>
+</div>
+</div>
+<!-- Inquiry Form -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant/10">
+<h3 class="font-headline text-xl md:text-3xl font-bold text-primary mb-8">Send an Inquiry</h3>
+<div class="space-y-6" id="inquiry-form">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant" for="inq-name">Full Name</label>
+<input
+id="inq-name"
+class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-secondary/50 px-4 py-3"
+placeholder="Your Name"
+type="text"
+/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant" for="inq-phone">Phone Number</label>
+<input
+id="inq-phone"
+class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-secondary/50 px-4 py-3"
+placeholder="+91"
+type="tel"
+/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant" for="inq-message">Message</label>
+<textarea
+id="inq-message"
+class="w-full bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-secondary/50 px-4 py-3"
+placeholder="How can we help you?"
+rows="4"
+></textarea>
+</div>
+<button
+class="w-full bg-primary text-white py-3 rounded-xl font-bold text-base hover:bg-primary-container transition-colors flex items-center justify-center gap-2"
+onclick="sendInquiryToWhatsApp()"
+type="button"
+>
+              Send via WhatsApp
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full pt-0 md:pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-6 md:px-12 text-center md:text-left gap-10 md:gap-0">
+<!-- Brand -->
+<div class="space-y-6 flex flex-col items-center md:items-start">
+<div class="font-serif text-xl font-bold text-blue-900 dark:text-blue-100">
+        EUROQUAL TECHNICAL TRAINING FOUNDATION
+</div>
+<p class="font-sans text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-xs mx-auto md:mx-0">
+        Pioneering excellence in educational transformation. Architecting futures for the leaders of tomorrow.
+</p>
+<div class="flex justify-center md:justify-start gap-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors opacity-80 hover:opacity-100"
+href="https://www.instagram.com/" target="_blank">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors opacity-80 hover:opacity-100"
+href="https://www.facebook.com/" target="_blank">
+<span class="material-symbols-outlined">thumb_up</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-amber-500 transition-colors opacity-80 hover:opacity-100"
+href="https://wa.me/919172115823?text=Hi%20ARCRISE%20FOUNDATION" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="space-y-6 flex flex-col items-center md:items-start">
+<h4 class="font-bold text-primary dark:text-blue-200">Quick Links</h4>
+<ul class="space-y-3 font-sans text-sm leading-relaxed">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-amber-500" href="#mission">Mission</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-amber-500" href="#education">Education Programs</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-amber-500" href="#gallery">Gallery</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-amber-500" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom -->
+<div class="max-w-7xl mx-auto px-6 mt-12 md:mt-16 pt-6 md:pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="font-sans text-sm text-slate-500 dark:text-slate-400">
+      © 2026 EUROQUAL TECHNICAL TRAINING FOUNDATION. All rights reserved.
+</p>
+</div>
+</footer>
+<script>
+/* ============================
+     CAROUSEL
+  ============================ */
+  (function () {
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+let current = 0;
+let timer;
+function goTo(index) {
+slides[current].classList.remove('active');
+dots[current].classList.remove('bg-secondary-container', 'active-dot');
+dots[current].classList.add('bg-white/30');
+current = (index + slides.length) % slides.length;
+slides[current].classList.add('active');
+dots[current].classList.remove('bg-white/30');
+dots[current].classList.add('bg-secondary-container', 'active-dot');
+    }
+function next() {
+goTo(current + 1);
+    }
+function startTimer() {
+timer = setInterval(next, 4000);
+    }
+function resetTimer() {
+clearInterval(timer);
+startTimer();
+    }
+dots.forEach(function (dot) {
+dot.addEventListener('click', function () {
+goTo(parseInt(dot.dataset.index));
+resetTimer();
+      });
+    });
+startTimer();
+  })();
+/* ============================
+     INQUIRY FORM → WHATSAPP
+  ============================ */
+function sendInquiryToWhatsApp() {
+var name = document.getElementById('inq-name').value.trim();
+var phone = document.getElementById('inq-phone').value.trim();
+var message = document.getElementById('inq-message').value.trim();
+if (!name && !phone && !message) {
+alert('Please fill in at least one field before sending.');
+return;
+    }
+var text = 'Hi EUROQUAL TECHNICAL TRAINING FOUNDATION,%0A';
+if (name) text += 'Name: ' + encodeURIComponent(name) + '%0A';
+if (phone) text += 'Phone: ' + encodeURIComponent(phone) + '%0A';
+if (message) text += 'Message: ' + encodeURIComponent(message);
+window.open('https://wa.me/919172115823?text=' + text, '_blank');
+  }
+/* ============================
+     FOOTER FORM → WHATSAPP
+  ============================ */
+function sendFooterToWhatsApp() {
+var name = document.getElementById('footer-name').value.trim();
+var phone = document.getElementById('footer-phone').value.trim();
+var message = document.getElementById('footer-message').value.trim();
+if (!name && !phone && !message) {
+alert('Please fill in at least one field before sending.');
+return;
+    }
+var text = 'Hi EUROQUAL TECHNICAL TRAINING FOUNDATION,%0A';
+if (name) text += 'Name: ' + encodeURIComponent(name) + '%0A';
+if (phone) text += 'Phone: ' + encodeURIComponent(phone) + '%0A';
+if (message) text += 'Message: ' + encodeURIComponent(message);
+window.open('https://wa.me/919172115823?text=' + text, '_blank');
+  }
+</script>
+</body>
+</html>
